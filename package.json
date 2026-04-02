@@ -1,0 +1,18 @@
+{
+  "name": "@pipeworx/mcp-onthisday",
+  "version": "0.1.0",
+  "description": "MCP server for historical events, births, and deaths on any date via byabbe.se API",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "onthisday", "history", "events"],
+  "author": "Pipeworx",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
