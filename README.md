@@ -1,30 +1,54 @@
-# @pipeworx/mcp-onthisday
+# mcp-onthisday
 
-MCP server for historical events, births, and deaths on any date via the [byabbe.se On This Day API](https://byabbe.se/on-this-day/). Free, no authentication required.
+On This Day MCP — wraps byabbe.se/on-this-day (free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_events` | Get historical events that took place on a specific month and day |
-| `get_births` | Get notable people born on a specific month and day |
-| `get_deaths` | Get notable people who died on a specific month and day |
 
-## Quickstart via Pipeworx Gateway
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-      "name": "onthisday__get_events",
-      "arguments": { "month": 7, "day": 20 }
-    },
-    "id": 1
-  }'
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "onthisday": {
+      "url": "https://gateway.pipeworx.io/onthisday/mcp"
+    }
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Onthisday data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
