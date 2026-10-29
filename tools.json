@@ -1,0 +1,65 @@
+[
+  {
+    "name": "get_events",
+    "description": "Search historical events on a specific date. Provide month (1-12) and day (1-31). Returns event descriptions, years, and details.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "number",
+          "description": "Month as a number (1-12)."
+        },
+        "day": {
+          "type": "number",
+          "description": "Day of the month (1-31)."
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ]
+    }
+  },
+  {
+    "name": "get_births",
+    "description": "Find notable people born on a specific date. Provide month (1-12) and day (1-31). Returns names, birth years, and biographical details.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "number",
+          "description": "Month as a number (1-12)."
+        },
+        "day": {
+          "type": "number",
+          "description": "Day of the month (1-31)."
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ]
+    }
+  },
+  {
+    "name": "get_deaths",
+    "description": "Find notable people who died on a specific date. Provide month (1-12) and day (1-31). Returns names, death years, and biographical detail.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "number",
+          "description": "Month as a number (1-12)."
+        },
+        "day": {
+          "type": "number",
+          "description": "Day of the month (1-31)."
+        }
+      },
+      "required": [
+        "month",
+        "day"
+      ]
+    }
+  }
+]
