@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-onthisday",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "On This Day MCP — wraps byabbe.se/on-this-day (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "onthisday",
     "gatewaySlug": "onthisday",
-    "sourceHash": "v1-90a128fd048592f53e6146d6f369a84040f4064c42c6e0ea68fc07050600ccc0",
-    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
+    "sourceHash": "v1-474b22e7c28d4c3e28ad20f97706125acb74a4b72afe864186f2f0e900ec9a91",
+    "sourceCommit": "bed7faa04e7276899b5e3870ef11c98625371f2b"
   }
 }
